@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+	<body>
+		<div class = "container">
+		<h4>{{poll.your_ques}}</h4>
+			<a href = "#/polls">Go to Polls</a>   
+	        	
+	        	<table class = "bar">
+		            <thead>
+		                <tr>
+		                    <th class ="row">Option</th>    
+		                    <th class ="row">Current Count of Votes</th> 
+		                   	<th class ="row">Action</th>
+		                   	
+		                </tr>    
+
+	            	</thead>
+	            	<tbody>
+		                <tr>
+		                    <td class ="row">{{poll.option1}}</td>
+		       
+		                    <td class ="row">{{poll.option1_count}}</td>
+		                    
+		                    <td class = "row">
+		                        <button ng-click="addVote(poll._id,'option1_count');">Vote</button>
+		                    </td>
+	                	</tr>
+
+	                	<tr>
+		                    <td class ="row">{{poll.option2}}</td>
+		       
+		                    <td class ="row">{{poll.option2_count}}</td>
+		                    
+		                    <td class = "row">
+		                        <button ng-click="addVote(poll._id,'option2_count')">Vote</button>
+		                    </td>
+	                	</tr>
+
+	                	<tr>
+		                    <td class ="row">{{poll.option3}}</td>
+		       
+		                    <td class ="row">{{poll.option3_count}}</td>
+		                    
+		                    <td class = "row">
+		                        <button ng-click="addVote(poll._id, 'option3_count')">Vote</button>
+		                    </td>
+	                	</tr>
+
+	                	<tr>
+		                    <td class ="row">{{poll.option4}}</td>
+		       
+		                    <td class ="row">{{poll.option4_count}}</td>
+		                    
+		                    <td class = "row">
+		                        <button ng-click="addVote(poll._id,'option4_count')">Vote</button>  
+		                    </td>
+	                	</tr>
+	            	</tbody>
+        		</table> 
+        </div> 
+
+    </body>
+</html>    

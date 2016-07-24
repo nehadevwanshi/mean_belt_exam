@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+	<body>
+		<div class = "container">
+			<h2>Welcome {{login_user}}  <a href= "" ng-click="logout()">Logout</a></h2>
+			<a href = "#/create_poll_form/">Create a New Poll</a>
+					
+					<h4> Current Polls:</h4>
+	        	
+	        	<table class = "bar">
+		            <thead>
+		                <tr>
+		                    <th class ="row">Name</th>    
+		                    <th class ="row">Survey Question</th> 
+		                   	<th class ="row">Date Posted</th>
+		                   	<th class ="row">Action</th>
+		                   	
+		                </tr>        
+
+	            	</thead>
+	            	<tbody>
+		                <tr ng-repeat="poll in polls track by $index " >
+		                    <td class ="row">{{poll.user_name}}</td>
+		         
+		                    <td class = "row">
+		                    <a href = "#/show_ques/{{poll._id}}">{{poll.your_ques}}</a>
+		                    </td>
+		                    <td class ="row">{{poll.date_posted | date:'mediumDate'}}</td>
+		                    
+		                    <td class = "row"  >
+		                        <button ng-click="deletePoll(poll._id, $index)">Delete</button>
+		                    </td>
+	                	</tr>
+	            	</tbody>
+        		</table> 
+        </div>                
+        		
+
+         
+    </body>
+</html>    

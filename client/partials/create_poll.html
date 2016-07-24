@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+	<body>
+	<div ng-controller="indexController">
+	<h3>Welcome {{login_user}}  <a href= "" ng-click="logout()">Logout</a></h3>
+	</div>
+		<div class = "container">
+
+			   Poll Form <a href = "#/polls">Cancel</a>
+	            
+	            <form >
+					
+					<h4> Put the Questions and Options Here :</h4>
+					<p> Your Question: <input  ng-model= "poll.your_ques" for= "name"></p> 
+
+					<p> Option 1: <input ng-model = "poll.option1" type = "text"></p> 
+
+					<p> Option 2: <input ng-model= "poll.option2" type = "text"></p> 
+
+					<p> Option 3: <input ng-model = "poll.option3" type = "text"></p> 
+
+					<p> Option 4:<input ng-model= "poll.option4" type = "text"></p>
+
+					<input type = "submit" value= "Create Poll" ng-click = "createPoll()">
+	            </form>
+	        	
+	        	
+        </div>     
+
+        
+    </body>
+</html>    
+
+
+
